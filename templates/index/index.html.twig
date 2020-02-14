@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello IndexController!{% endblock %}
+{% block title %}{{ parent()}} - Acceuil{% endblock %}
 
 {% block body %}
+{% include "index/header.html.twig" %}
 {% endblock %}

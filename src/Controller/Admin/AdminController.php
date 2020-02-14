@@ -2,17 +2,16 @@
 
 namespace App\Controller\Admin;
 
-use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/admin")
+ * @Route("/")
  */
 class AdminController extends AbstractController
 {
     /**
-     * @Route("/", name="admin")
+     * @Route("/", name="index")
      */
     public function admin()
     {
