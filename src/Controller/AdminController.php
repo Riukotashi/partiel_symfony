@@ -20,15 +20,15 @@ class AdminController extends AbstractController
             'controller_name' => 'AdminController',
         ]);
     }
-    
-    /**
-     * @Route("/users", name="users")
-     */
-    public function users(UserRepository $userRepository)
-    {
-        $users = $userRepository->findAll();
-        return $this->render('admin/users.html.twig', [
-            'users' => $users,
-        ]);
-    }
+
+    // /**
+    //  * @Route("/users", name="users")
+    //  */
+    // public function users(UserRepository $userRepository)
+    // {
+    //     $users = $userRepository->findAll();
+    //     return $this->render('admin/users.html.twig', [
+    //         'users' => $users,
+    //     ]);
+    // }
 }
