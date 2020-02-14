@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}- Annonce{% endblock %}
+
+{% block body %}
+    <div class="container">
+        {% for i in range(0, adverts|length -1, 2) %}
+            <div class="card-deck my-5">
+                {% include 'advert/advert.html.twig' with {'title': adverts[i].title, 'description': adverts[i].description,  'city': adverts[i].city, 'price': adverts[i].price, 'nbDays': adverts[i].nbDays}  %}
+                {% include 'advert/advert.html.twig' with {'title': adverts[i + 1].title, 'description': adverts[i + 1].description,  'city': adverts[i + 1].city, 'price': adverts[i + 1].price, 'nbDays': adverts[i + 1].nbDays}%}
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
